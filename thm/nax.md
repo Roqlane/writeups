@@ -72,4 +72,5 @@ So we are already root. To get the first flag, go to /home/galand:
 
 And for the root one:
 
-![image](https://github.com/Roqlane/writeups/assets/78229498/e72a4b19-e5ab-4e4d-b600-4bc2ead2d008)
+![image](https://github.com/Roqlane/writeups/assets/78229498/5c508396-ad39-430a-bb1a-0fb3486cb3bf)
+
