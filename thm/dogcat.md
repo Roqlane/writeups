@@ -86,4 +86,4 @@ That surely means that the host is executing the file, so if we add a reverse sh
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/ff121d3e-86d4-49a5-842d-811c2ce13ac8)
 
-I searched for a docker escape but it was a cron job all this time XD. 
+I searched for a docker escape, I guess a cron job works too XD. 
