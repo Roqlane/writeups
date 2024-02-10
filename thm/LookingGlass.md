@@ -28,3 +28,40 @@ I think that are creds.
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/389a4ee5-0264-49b9-8a59-69ba282a54e1)
 
+# Privesc
+
+When you look at the cron jobs:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/6a20bd92-939b-42d4-a2af-66131441ef10)
+
+So there is a user who execute our file at reboot
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/a141bc5b-b31a-49cf-8b79-1872f66295fb)
+
+Let's write a reverse shell in this script.
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/bd7a13d6-001a-43f0-b8d6-d9083515d584)
+
+reboot the machine and wait a while:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/1af20f35-d9a6-4ba7-b3a5-ecb17074fc45)
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/97343287-f291-47fa-9d05-d885e378f1b0)
+
+In the new user home directory, we can see this file
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/311e55bb-47ec-4916-88ba-036455fa7d68)
+
+Trying to crack all of this:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/a02afd6f-dd1b-410a-825e-b444a3d5e942)
+
+You finally get this phrase: maybe one  these the  password.
+
+There are few of these that I didn't manage to crack:
+
+28391d3bc64ec15cbb090426b04aa6b7649c3cc85f11230bb0105e02d15e3624:
+
+fa51fd49abf67705d6a35d18218c115ff5633aec1f9ebfdc9d5d4956416f57f6
+
+7468652070617373776f7264206973207a797877767574737271706f6e6d6c6b
