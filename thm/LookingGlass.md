@@ -28,7 +28,9 @@ I think that are creds.
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/389a4ee5-0264-49b9-8a59-69ba282a54e1)
 
-# Privesc
+## Privesc
+
+### As jabberwock
 
 When you look at the cron jobs:
 
@@ -46,6 +48,8 @@ reboot the machine and wait a while:
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/1af20f35-d9a6-4ba7-b3a5-ecb17074fc45)
 
+### As tweedledum
+
 ![image](https://github.com/Roqlane/writeups/assets/78229498/97343287-f291-47fa-9d05-d885e378f1b0)
 
 In the new user home directory, we can see this file
@@ -56,12 +60,14 @@ Trying to crack all of this:
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/a02afd6f-dd1b-410a-825e-b444a3d5e942)
 
-You finally get this phrase: maybe one  these the  password.
+You can guess this phrase: maybe one of these is the password.
 
-There are few of these that I didn't manage to crack:
-
-28391d3bc64ec15cbb090426b04aa6b7649c3cc85f11230bb0105e02d15e3624:
-
-fa51fd49abf67705d6a35d18218c115ff5633aec1f9ebfdc9d5d4956416f57f6
+There is only one of these that I didn't manage to crack:
 
 7468652070617373776f7264206973207a797877767574737271706f6e6d6c6b
+
+After thinking a little, if it is not a hash then it is hex:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/518f722c-cfe0-42bb-8fdf-17ce38f78500)
+
+### As humptydumpty
