@@ -20,3 +20,11 @@ So it is a guess game, after trying several ports, I found the good one:
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/7ad72bb6-8bc7-40d6-9a01-865f294b26c4)
 
+My guess is that this is a vigenere cipher text. I used this site https://www.guballa.de/vigenere-solver, and secret being bewareTheJabberwock
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/f87b57cf-a29d-44ac-8de3-6600adb45c06)
+
+I think that are creds.
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/389a4ee5-0264-49b9-8a59-69ba282a54e1)
+
