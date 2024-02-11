@@ -70,4 +70,24 @@ After thinking a little, if it is not a hash then it is hex:
 
 ![image](https://github.com/Roqlane/writeups/assets/78229498/518f722c-cfe0-42bb-8fdf-17ce38f78500)
 
+Password being: zyxwvutsrqponmlk
+
 ### As humptydumpty
+
+When you look at the properties of the alice directory, you see that the perms are only executable. Even though, is it possible to list its content if you know the full path ? 
+Let's try that and see if there is a private key .
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/9d819403-b501-456e-9d01-b98fdece4aa7)
+
+We can now connect through ssh using  this key.
+
+### As Alice
+
+Let's see if the user is in the sudoers:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/c78241ea-a21b-41aa-a8b1-9383bd864d98)
+
+So alice can execute bash with sudo but needs to on the hostname ssalg-gnikool. Perfect ! The sudo command can do that with the -h tag:
+
+![image](https://github.com/Roqlane/writeups/assets/78229498/60735676-7b22-4b9c-9406-12a86583a26a)
+
