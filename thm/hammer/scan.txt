@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Fri Dec 13 19:21:34 2024 as: nmap -sC -sV -p- -o scan.txt 10.10.84.115
+Nmap scan report for 10.10.84.115
+Host is up (0.048s latency).
+Not shown: 65533 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+1337/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Login
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 13 19:23:40 2024 -- 1 IP address (1 host up) scanned in 125.98 seconds
