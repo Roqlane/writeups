@@ -39,7 +39,7 @@ There was on the administrator panel a template editor where it is possible to w
 
 ![](./assets/administrator_template.png)
 
-After executing the reverse shell, I gained access and stabilized my shell.
+To execute the reverse shell, I juste had to save the template and to return to the home page. This triggered the connection and I gained access to the machine and stabilized my shell.
 
 # User flag
 
