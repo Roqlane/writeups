@@ -4,9 +4,7 @@ As always, the first step is to scan the machine's ports.
 
 ![](./assets/ports.png)
 
-There were three open ports: SSH, HTTP, and MySQL. On the website, I found a robots.txt file containing an endpoint to an administrator login form.
-
-![](./assets/home.png)
+On the website, I found a robots.txt file containing an endpoint to an administrator login form.
 
 ![](./assets/robots.png)
 
