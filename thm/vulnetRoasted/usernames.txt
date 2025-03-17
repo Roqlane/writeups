@@ -1,0 +1,9 @@
+Administrator
+Guest
+krbtgt
+WIN-2BO8M1OE1M1$
+enterprise-core-vn
+a-whitehat
+t-skid
+j-goldenhand
+j-leet
