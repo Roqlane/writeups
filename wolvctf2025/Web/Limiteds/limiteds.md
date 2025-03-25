@@ -73,7 +73,7 @@ I needed 2 things to crack the password, the hash and the plugin used to make th
 
 I found this article on how to get the correct format https://www.percona.com/blog/brute-force-mysql-password-from-a-hash/ which help me crack the password.
 
-This the hash I retrieved `$mysql$A$005*1264265D28552B3214592D573C5804034A7F2B5F*4479347831332E72543739672E4D6F54726A51636F4E304D564D47357266496E312E424C336B5943754733`. But before cracking it I need to generate a new wordlist.
+This the hash I retrieved `$mysql$A$005*1264265D28552B3214592D573C5804034A7F2B5F*4479347831332E72543739672E4D6F54726A51636F4E304D564D47357266496E312E424C336B5943754733`. But before cracking it I needed to generate a new wordlist.
 
 `grep -o '\b\w\{13\}\b' rockyou.txt > passwords`
 
