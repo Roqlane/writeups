@@ -20,4 +20,4 @@ At last, using `KeePassXC`, I retrieved the content of the db.
 
 ![](./login.png)
 
-![](./flag.png)
+![](./the_flag.png)
